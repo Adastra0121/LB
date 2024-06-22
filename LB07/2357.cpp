@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int arr[12][12];
+int arr[20][20];
 
 int main(){
-    int n, m, ans = 0;
+    int n, m, ans;
     cin >> n >> m;
     for (int i = 1; i <= n; i++)
     {
@@ -14,12 +14,12 @@ int main(){
             cin >> arr[i][j];
         }
     }
-    for (int i = 1; i <= n; i++)
+    for (int i = 1; i <= m; i++)
     {
         ans = 0;
-        for (int j = 1; j <= m; j++)
+        for (int j = 1; j <= n; j++)
         {
-            ans += arr[i][j];
+            ans += arr[j][i];
         }
         cout << ans << endl;
     }
