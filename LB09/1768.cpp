@@ -2,21 +2,22 @@
 
 using namespace std;
 
-char c;
+char c[100010];
 int s[30];
 
 int main(){
-    while (cin >> c)
+    cin >> c;
+    for (int i = 1; c[i]; i++)
     {
-        s[int(c -'a'+1)]++;
+        s[c[i]]++;
     }
-    for (int i = 1; i <= 26; i++)
+    
+    for (int i = 1; c[i]; i++)
     {
-        // if(s[i]==1) {
-        //     cout << char(i+'a'-1);
-        //     return 0;
-        // }
-        cout << s[i] << endl;
+        if(s[c[i]]==1) {
+            cout << c[i];
+            return 0;
+        }
     }
     cout << "no";
     return 0;
