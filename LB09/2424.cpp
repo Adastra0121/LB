@@ -1,29 +1,25 @@
 #include<bits/stdc++.h>
-
 using namespace std;
-
-int n, cnt, num[10];
-
+int n, cnt = 1;
 int main(){
     cin >> n;
-    for (int i = 1; ; i++)
+    int i;
+    for (i = 1; cnt <= n; i++)
     {
-        cnt = 0;
-        for (int j = i; j>=0; j/=10)
+        int num[10] ={0},t = 0;
+        for (int j = i; j > 0; j /= 10)
         {
-            num[++cnt] = j % 10;
+            num[j%10]++;
         }
-        for (int j = 1; j <= cnt; j++)
+        for (int j = 0; j <= 9; j++)
         {
-            for (int k = j; k <= cnt; k++)
-            {
-                if (num[])
+            if(num[j]>=2) {
+                t = 1;
+                break;
             }
-            
         }
-        
+        if(!t) cnt++;
     }
-
-    
-    
+    cout << i-1;
+    return 0;
 }
